@@ -1,4 +1,4 @@
-module github.com/azizahonohunova/wallet
+module github.com/azizahonohunova/search
 
 go 1.15
 
