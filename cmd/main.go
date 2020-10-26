@@ -1,6 +1,8 @@
 package main
 
 import (
+	"context"
+	"fmt"
 	"log"
 	"math/rand"
 	"sync"
@@ -144,4 +146,16 @@ func anotherExample() {
 	//for i := range p.getOutChan() {
 	//	log.Println(i, " get message")
 	//}
+
+	res := search.Any(context.Background(), "HTTP", []string{"./test.txt", "./test copy.txt"})
+	r, ok := <-res
+	if !ok {
+		fmt.Println("error ok =>", ok)
+	}
+	fmt.Println("----------------")
+	fmt.Println("res.Phrase) =>", r.Phrase)
+	fmt.Println("res.Line) =>", r.Line)
+	fmt.Println("res.LineNum) =>", r.LineNum)
+	fmt.Println("res.ColNum) =>", r.ColNum)
+	fmt.Println("----------------")
 }
