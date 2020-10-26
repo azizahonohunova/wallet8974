@@ -13,7 +13,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/azizahonohunova/wallet/pkg/types"
+	"github.com/azizahonohunova/search/pkg/types"
 	"github.com/google/uuid"
 )
 
